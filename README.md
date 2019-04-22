@@ -17,11 +17,15 @@ After successfully compiling the convolution operators you can start DPRNet trai
 
 To train object classification, execute
 
+```bash
 python train_modelnet40.py [epoch]
+```
 
 To evaluate, execute
 
+```bash
 python eval_modelnet40.py [epoch]
+```
 
 Similar procedure is required for scene segmentation task. By default 'epoch' is 0. You can resume the training by passing epoch number in the above command.
 
@@ -41,3 +45,6 @@ This code includes the following third party libraries and data:
 - Some other utility code from Pointwise CNN
 
 - h5py
+
+## Acknowledgemets
+The code for convolution operators, Training and evaluation borrowed from [<a href="https://github.com/scenenn/pointwise">Pointwise CNN</a>] 
