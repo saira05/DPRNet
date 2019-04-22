@@ -1,12 +1,14 @@
 # DPRNet : Deep 3D Point based Residual Network for Semantic Segmentation and Classification of 3D Point Clouds
 
-# Usage
+## Usage
 
 This code is tested in Ubuntu 16.04 LTS with CUDA 8.0 and Tensorflow-gpu==1.4.
-First of all convolutional operators needs to be compiled as follow:
+First of all you need to compile convolutional operators as follow:
 
 cd tf_ops/conv3p/
+
 chmod 777 tf_conv3p_compile.sh
+
 ./tf_conv3p_compile.sh -a
 
 
