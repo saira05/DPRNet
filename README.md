@@ -4,12 +4,13 @@
 
 This code is tested in Ubuntu 16.04 LTS with CUDA 8.0 and Tensorflow-gpu==1.4.
 First of all you need to compile convolutional operators as follow:
-
+```bash
 cd tf_ops/conv3p/
 
 chmod 777 tf_conv3p_compile.sh
 
 ./tf_conv3p_compile.sh -a
+```
 
 if you are using tensorflow-gpu==1.4 or above then you might want to try compiling with `tf_conv3p_compile_tf14.sh` instead. It fixes some include paths due to `nsync_cv.h`, and set the flag `_GLIBCXX_USE_CXX11_ABI=0` to make it compatible to libraries compiled with GCC version earlier than 5.1. 
 
