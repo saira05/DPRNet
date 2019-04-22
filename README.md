@@ -11,25 +11,23 @@ chmod 777 tf_conv3p_compile.sh
 
 ./tf_conv3p_compile.sh -a
 
+if you are using tensorflow-gpu==1.4 or above then you might want to try compiling with `tf_conv3p_compile_tf14.sh` instead. It fixes some include paths due to `nsync_cv.h`, and set the flag `_GLIBCXX_USE_CXX11_ABI=0` to make it compatible to libraries compiled with GCC version earlier than 5.1. 
+
+After successfully compiling the convolution operators you can start DPRNet training as follow:
 
 To train object classification, execute
 
-python3 train_modelnet40.py [epoch]
+python train_modelnet40.py [epoch]
 
 To evaluate, execute
 
-python3 eval_modelnet40.py [epoch]
+python eval_modelnet40.py [epoch]
 
 Similar procedure is required for scene segmentation task. By default 'epoch' is 0. You can resume the training by passing epoch number in the above command.
 
-# Training Data
+## Training Data
 
 Data folder contains links of the datasets for both classification and semantic segmentation task.
-
-
-## Troubleshooting 
-
-If you are using Tensorflow 1.4, you might want to try compiling with `tf_conv3p_compile_tf14.sh` instead. It fixes some include paths due to `nsync_cv.h`, and set the flag `_GLIBCXX_USE_CXX11_ABI=0` to make it compatible to libraries compiled with GCC version earlier than 5.1. 
 
 
 ## Dependencies
