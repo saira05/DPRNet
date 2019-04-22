@@ -1,0 +1,19 @@
+{
+    "max_epoch" : 301,
+    "start_learning_rate" : 0.001,
+    "momentum" : 0.9,
+    "decay_steps" : 100000,
+    "decay_rate" : 0.96,    
+    "model" : "dprn_8layers",
+    "sort_cloud" : true,
+    "sort_method" : "xyz",
+    "batch_size" : 32,
+    "snapshot_interval" : 5,
+    "use_gpu" : false,
+
+    "scene_seg" : {
+        "model" : "scene_seg_8layer_dprn",
+        "batch_size" : 64, 
+        "use_gpu" : true
+    }
+}
