@@ -1,4 +1,5 @@
 # DPRNet : Deep 3D Point based Residual Network for Semantic Segmentation and Classification of 3D Point Clouds
+https://ieeexplore.ieee.org/abstract/document/8721650
 
 ## Usage
 
